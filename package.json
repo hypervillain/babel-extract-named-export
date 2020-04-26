@@ -1,0 +1,25 @@
+{
+  "name": "extract-mdx-export",
+  "version": "0.0.1",
+  "description": "Extract named exports from MDX files using Babel",
+  "main": "index.js",
+  "repository": "https://github.com/hypervillain/extract-mdx-export",
+  "author": "Hugo Villain <hugo.villain@prismic.io>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "@babel/preset-env": "^7.9.5",
+    "@mdx-js/mdx": "^1.5.9",
+    "ast-to-literal": "^0.0.1",
+    "core-js-compat": "^3.6.5"
+  },
+  "devDependencies": {
+    "deep-equal": "^2.0.3",
+    "jest": "^24.4.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
