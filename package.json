@@ -1,9 +1,9 @@
 {
-  "name": "extract-mdx-export",
+  "name": "mdx-extract-export",
   "version": "0.0.1",
   "description": "Extract named exports from MDX files using Babel",
   "main": "index.js",
-  "repository": "https://github.com/hypervillain/extract-mdx-export",
+  "repository": "https://github.com/hypervillain/mdx-extract-export",
   "author": "Hugo Villain <hugo.villain@prismic.io>",
   "license": "MIT",
   "private": false,

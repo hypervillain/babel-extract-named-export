@@ -1,4 +1,4 @@
-# extract-mdx-export
+# mdx-extract-export
 
 Extract named exports from MDX files using Babel.
 
@@ -8,7 +8,7 @@ code example:
 
 ```javascript
 const fs = require('fs')
-const extract = require('extract-mdx-export')
+const extract = require('mdx-extract-export')
 const sample = fs.readFileSync('/path/to/file.mdx')
 
 main()
@@ -30,4 +30,4 @@ Storing stuctured data along with MDX files, and accessing this data at runtime,
 
 Now imagine that you want to create a small API / display info out of a bunch of MDX files. You would have to actually import each of these files in order to acces their metadata. No thanks 🙅‍♀️: use this package instead!
 
-See a (WIP) example here: https://github.com/trycereals/next, where a Netlify plugin uses `extract-mdx-export` to create a JSON index file. It then can be directly accessed by a Netlify function ✌️
+See a (WIP) example here: https://github.com/trycereals/next, where a Netlify plugin uses `mdx-extract-export` to create a JSON index file. It then can be directly accessed by a Netlify function ✌️
