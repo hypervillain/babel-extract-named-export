@@ -1,6 +1,4 @@
-# this is an MDX file
-
-it contains text and named exports like:
+const rand = Math.random()
 
 export const meta = {
   title: 'My index.mdx sample file',

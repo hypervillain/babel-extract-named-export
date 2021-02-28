@@ -1,6 +1,6 @@
-# mdx-extract-export
+# babel-extract-named-export
 
-Extract named exports from MDX files using Babel.
+Extract named exports from ES6 files using Babel.
 
 ----
 
@@ -8,8 +8,8 @@ code example:
 
 ```javascript
 const fs = require('fs')
-const extract = require('mdx-extract-export')
-const sample = fs.readFileSync('/path/to/file.mdx')
+const extract = require('babel-extract-named-export')
+const sample = fs.readFileSync('/path/to/file.js')
 
 main()
 async function main() {
@@ -24,10 +24,17 @@ Optionally, pass a `search` array option to select keys you want to extract:
   const { meta } = await extract(sample, { search: ['meta'] })
 ````
 
+If you need to override some properties of Babel `transform` function,
+you can pass a `transformProps` object like this:
+
+````javascript
+  const { meta } = await extract(sample, { transformProps: { plugins: [/* ... */] } })
+````
+
+See `@babel/core` documentation here: https://babeljs.io/docs/en/babel-core
+
 #### When would you use this?
 
-Storing stuctured data along with MDX files, and accessing this data at runtime, is a fairly common case. Think of configuration objects you would pass to `react-helmet` for example.
-
-Now imagine that you want to create a small API / display info out of a bunch of MDX files. You would have to actually import each of these files in order to acces their metadata. No thanks 🙅‍♀️: use this package instead!
-
-See a (WIP) example here: https://github.com/trycereals/next, where a Netlify plugin uses `mdx-extract-export` to create a JSON index file. It then can be directly accessed by a Netlify function ✌️
+In my case, I wanted to build a small API out of some metadata stored
+along with MDX files. Some common cases include: stripping a named export
+at build time (think `prop-types`) or run a function server-side (think `getStaticProps`).

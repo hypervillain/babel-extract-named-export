@@ -1,16 +1,15 @@
 const { transform } = require('@babel/core')
-const mdx = require('@mdx-js/mdx')
 
 const jsx = require('@babel/plugin-transform-react-jsx')
 const presetEnv = require('@babel/preset-env')
 const plugin = require('./plugin')
 
-async function extractNamedExports(content, { search } = { search: [] }) {
+async function extractNamedExports(code, { search, transformProps } = { search: [] }) {
   try {
-    const code = await mdx(content)
     transform(code, {
       presets: [presetEnv],
       plugins: [jsx, [plugin, { search }]],
+      ...transformProps
     })
     return plugin.data
   } catch(e) {

@@ -5,7 +5,7 @@ const equal = require('deep-equal')
 const extract = require('..')
 
 const { meta, meta2 } = require('./sample')
-const sample = fs.readFileSync(path.join(__dirname, 'sample', 'sample.mdx'), 'utf8')
+const sample = fs.readFileSync(path.join(__dirname, 'sample', 'file.js'), 'utf8')
 
 test('extracts all named exports', async () => {
   const result = await extract(sample)
@@ -18,6 +18,6 @@ test('extracts specific named exports', async () => {
 })
 
 test('empty _is_ empty', async () => {
-  const result = await extract('#h1')
+  const result = await extract('')
   expect(equal({}, result)).toEqual(true)
 })
