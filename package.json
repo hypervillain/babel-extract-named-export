@@ -1,6 +1,6 @@
 {
   "name": "babel-extract-named-export",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extract named exports from ES6 files using Babel",
   "main": "index.js",
   "repository": "https://github.com/hypervillain/babel-extract-named-export",
