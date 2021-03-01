@@ -1,4 +1,4 @@
-const rand = Math.random()
+Math.random()
 
 export const meta = {
   title: 'My index.mdx sample file',

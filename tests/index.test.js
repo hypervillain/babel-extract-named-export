@@ -21,3 +21,8 @@ test('empty _is_ empty', async () => {
   const result = await extract('')
   expect(equal({}, result)).toEqual(true)
 })
+
+test('handles fallback', async () => {
+  const result = await extract('export const myFunc = () => {}', { fallback: true })
+  expect(result.myFunc.type).toBe('FunctionExpression')
+})

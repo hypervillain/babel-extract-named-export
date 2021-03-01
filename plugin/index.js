@@ -8,7 +8,7 @@ function reset() {
   plugin.data = {}
 }
 
-function plugin(_, { search = [] } = {}) {
+function plugin(_, { search = [], fallback = false } = {}) {
   reset()
   const mode = search.length ? 'IN' : 'ALL'
   return {
@@ -19,7 +19,11 @@ function plugin(_, { search = [] } = {}) {
         declarations.forEach((declaration) => {
           const { name } = declaration.id
           if (mode === 'ALL' || search.includes(name)) {
-            set(name, toJs(declaration.init));
+            const jsValue = toJs(declaration.init)
+            if (jsValue !== undefined || !fallback) {
+              return set(name, toJs(declaration.init))
+            }
+            return set(name, declaration.init)
           }
         })
       }
