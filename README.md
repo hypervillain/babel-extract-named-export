@@ -31,7 +31,7 @@ you can pass a `transformProps` object like this:
   const { meta } = await extract(sample, { transformProps: { plugins: [/* ... */] } })
 ````
 
-See `@babel/standalone` documentation here: https://babeljs.io/docs/en/standalone
+See `@babel/core` documentation here: https://babeljs.io/docs/en/babel-core
 
 #### When would you use this?
 
