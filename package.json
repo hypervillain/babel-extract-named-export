@@ -8,10 +8,10 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@babel/core": "^7.9.0",
     "@babel/plugin-transform-react-jsx": "^7.9.4",
     "@babel/preset-env": "^7.9.5",
-    "ast-to-literal": "0.0.3",
+    "@babel/standalone": "^7.13.9",
+    "ast-to-literal": "0.0.4",
     "core-js-compat": "^3.6.5"
   },
   "devDependencies": {

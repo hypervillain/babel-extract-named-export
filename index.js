@@ -1,4 +1,4 @@
-const { transform } = require('@babel/core')
+const { transform } = require('@babel/standalone')
 
 const jsx = require('@babel/plugin-transform-react-jsx')
 const presetEnv = require('@babel/preset-env')
