@@ -22,6 +22,16 @@ test('empty _is_ empty', async () => {
   expect(equal({}, result)).toEqual(true)
 })
 
+test('handles custom plugins', async () => {
+  const result = await extract('export const myFunc = {}', { useToJs: false })
+  expect(result.myFunc.type).toBe('ObjectExpression')
+})
+
+test('handles !useToJs', async () => {
+  const result = await extract('export const myFunc = {}', { useToJs: false })
+  expect(result.myFunc.type).toBe('ObjectExpression')
+})
+
 test('handles fallback', async () => {
   const result = await extract('export const myFunc = () => {}', { fallback: true })
   expect(result.myFunc.type).toBe('FunctionExpression')

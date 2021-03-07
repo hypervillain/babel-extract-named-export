@@ -1,6 +1,6 @@
 {
   "name": "babel-extract-named-export",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Extract named exports from ES6 files using Babel",
   "main": "index.js",
   "repository": "https://github.com/hypervillain/babel-extract-named-export",
@@ -9,8 +9,9 @@
   "private": false,
   "dependencies": {
     "@babel/core": "^7.13.8",
-    "@babel/plugin-transform-react-jsx": "^7.9.4",
     "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.12.13",
+    "@vue/babel-preset-app": "^4.5.11",
     "ast-to-literal": "0.0.4",
     "core-js-compat": "^3.6.5"
   },
