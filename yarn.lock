@@ -1644,7 +1644,7 @@ assign-symbols@^1.0.0:
   resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
   integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
 
-ast-to-literal@0.0.4:
+ast-to-literal@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/ast-to-literal/-/ast-to-literal-0.0.4.tgz#55bf2ab2855388e73ecfed32ed6ce5804589b920"
   integrity sha512-i/FzUMW0BVtimGOAYCk1YdIhCAt+rm80Uq2LiTMtYfC+pYyad59sFcUFU2MkKSc9GplRIXvTxThJvRz/5ZN8nQ==
